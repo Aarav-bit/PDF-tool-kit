@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Toolkit</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>PDF Toolkit</h1>
+
+  <h2>Merge PDFs</h2>
+  <form action="/merge" method="post" enctype="multipart/form-data">
+    <input type="file" name="pdfs" multiple accept="application/pdf" required>
+    <button type="submit">Merge</button>
+  </form>
+</body>
+</html>
+
+<h2>Split PDF</h2>
+<form action="/split" method="post" enctype="multipart/form-data">
+  <input type="file" name="pdf" accept="application/pdf" required><br>
+  From page: <input type="number" name="start_page" min="1" required>
+  To page: <input type="number" name="end_page" min="1" required>
+  <button type="submit">Split</button>
+</form>
+
+<h2>Rotate PDF</h2>
+<form action="/rotate" method="post" enctype="multipart/form-data">
+  <input type="file" name="pdf" accept="application/pdf" required><br>
+  Rotate by (90, 180, 270): <input type="number" name="angle" required>
+  <button type="submit">Rotate</button>
+</form>
+
+<h2>Add Password to PDF</h2>
+<form action="/add-password" method="post" enctype="multipart/form-data">
+  <input type="file" name="pdf" accept="application/pdf" required><br>
+  Password: <input type="text" name="password" required>
+  <button type="submit">Add Password</button>
+</form>
+
+<h2>Remove Password from PDF</h2>
+<form action="/remove-password" method="post" enctype="multipart/form-data">
+  <input type="file" name="pdf" accept="application/pdf" required><br>
+  Password: <input type="text" name="password" required>
+  <button type="submit">Remove Password</button>
+</form>
