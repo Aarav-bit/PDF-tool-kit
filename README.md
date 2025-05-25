@@ -2,7 +2,7 @@
 
 A simple and powerful web-based PDF Toolkit built with Flask and PyPDF2. Perform essential PDF operations like **merge**, **split**, **rotate**, and **password-protect** directly in your browser.
 
-![PDF Toolkit Screenshot](https://your-screenshot-url.com) <!-- Replace this with a real image -->
+ <!-- Replace this with a real image -->
 
 ---
 
